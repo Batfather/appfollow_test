@@ -15,4 +15,5 @@ ITEM_PIPELINES = {
 }
 
 # MONGODB SETTINGS
-MONGO_URI = 'mongodb://127.0.0.1/appfollow'
+MONGO_URI = 'mongodb://' + os.environ['MONGODB_HOSTNAME'] + ':27017/' \
+                                  + os.environ['MONGODB_DATABASE']
